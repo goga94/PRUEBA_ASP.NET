@@ -1,0 +1,35 @@
+﻿@model PRUEBA.Models.Inventario
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Eliminar Producto</h4>
+
+            </div>
+            <div class="panel-body">
+                <div class="alert-danger" style="margin-bottom:30px">
+                    <h4>¿Desea eliminar el registro: @Html.DisplayTextFor(m => m.Nombre) @Html.DisplayTextFor(m => m.Tipo_de_Producto) ?</h4>
+                </div>
+
+                <form action="@Url.Action("Eliminar","Principal")" method="post">
+                    <input type="hidden" class="form-control" name="Clave" value="@Html.DisplayTextFor(m=>m.Clave)" />
+                    
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <a class="btn btn-warning" href="@Url.Action("Inicio","Principal")">Volver</a>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

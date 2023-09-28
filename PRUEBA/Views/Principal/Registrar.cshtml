@@ -1,0 +1,40 @@
+﻿@model PRUEBA.Models.Inventario
+
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nuevo Producto</h4>
+
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Registrar","Principal")" method="post">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="Nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo_de_Producto</label>
+                        <input type="text" class="form-control" name="Tipo_de_Producto" />
+                    </div>
+                    <div class="form-group">
+                        <label>Es_activo</label>
+                        <input type="text" class="form-control" name="Es_Activo" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <a class="btn btn-warning" href="@Url.Action("Inicio","Principal")">Volver</a>
+                </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
